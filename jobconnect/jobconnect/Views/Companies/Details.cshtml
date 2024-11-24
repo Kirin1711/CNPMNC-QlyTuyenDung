@@ -1,0 +1,67 @@
+﻿@model jobconnect.Models.Company
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Xem</h1>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailCompanies)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmailCompanies)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Website)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Website)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AvartarCompanies)
+        </dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.AvartarCompanies))
+            {
+                <img src="~/images/@Model.AvartarCompanies" style="height:100px; width:100px;" alt="Company Avatar" />
+            }
+            else
+            {
+                <img src="~/images/default-avatar.png" style="height:100px; width:100px;" alt="Default Avatar" />
+            }
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Field)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Field.FieldName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CompanyId">Sửa</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

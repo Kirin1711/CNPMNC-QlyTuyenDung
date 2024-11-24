@@ -1,0 +1,104 @@
+﻿@model jobconnect.Models.Job
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_MasterLayout2.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <!-- Card chứa form -->
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h3 class="mb-0">Chỉnh sửa tin tuyển dụng</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Edit">
+                        <!-- Validation summary -->
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <!-- JobId (ẩn) -->
+                        <input type="hidden" asp-for="JobId" />
+
+                        <!-- Title -->
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label fw-bold">Tiêu đề công việc</label>
+                            <input asp-for="Title" class="form-control" placeholder="Nhập tiêu đề công việc" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-bold">Mô tả</label>
+                            <textarea asp-for="Description" class="form-control" placeholder="Nhập mô tả công việc"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <!-- Salary Range -->
+                        <div class="mb-3">
+                            <label asp-for="SalaryRange" class="form-label fw-bold">Mức lương</label>
+                            <input asp-for="SalaryRange" class="form-control" placeholder="VD: $1000 - $2000" />
+                            <span asp-validation-for="SalaryRange" class="text-danger"></span>
+                        </div>
+
+                        <!-- Posted Date -->
+                        <div class="mb-3">
+                            <label asp-for="PostedDate" class="form-label fw-bold">Ngày đăng</label>
+                            <input asp-for="PostedDate" type="date" class="form-control" />
+                            <span asp-validation-for="PostedDate" class="text-danger"></span>
+                        </div>
+
+                        <!-- Experience Level -->
+                        <div class="mb-3">
+                            <label asp-for="ExperienceLevel" class="form-label fw-bold">Kinh nghiệm yêu cầu</label>
+                            <input asp-for="ExperienceLevel" class="form-control" placeholder="Nhập cấp độ kinh nghiệm" />
+                            <span asp-validation-for="ExperienceLevel" class="text-danger"></span>
+                        </div>
+
+                        <!-- Dropdowns -->
+                        <div class="mb-3">
+                            <label asp-for="JobTypeId" class="form-label fw-bold">Loại công việc</label>
+                            <select asp-for="JobTypeId" class="form-select" asp-items="ViewBag.JobTypeId"></select>
+                            <span asp-validation-for="JobTypeId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="CompanyId" class="form-label fw-bold">Công ty</label>
+                            <select asp-for="CompanyId" class="form-select" asp-items="ViewBag.CompanyId"></select>
+                            <span asp-validation-for="CompanyId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ProfessionId" class="form-label fw-bold">Ngành nghề</label>
+                            <select asp-for="ProfessionId" class="form-select" asp-items="ViewBag.ProfessionId"></select>
+                            <span asp-validation-for="ProfessionId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LocationId" class="form-label fw-bold">Địa điểm</label>
+                            <select asp-for="LocationId" class="form-select" asp-items="ViewBag.LocationId"></select>
+                            <span asp-validation-for="LocationId" class="text-danger"></span>
+                        </div>
+
+                        <!-- Save button -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-save"></i> Lưu thay đổi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Back to List -->
+            <div class="text-center mt-3">
+                <a asp-action="Index2" class="btn btn-link text-decoration-none">
+                    <i class="bi bi-arrow-left-circle"></i> Quay lại danh sách
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

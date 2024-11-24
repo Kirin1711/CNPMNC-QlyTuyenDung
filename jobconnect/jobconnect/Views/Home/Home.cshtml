@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<head>
+    <meta charset="utf-8">
+    <title>Job Connect</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/animate/animate.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/owlcarousel/assets/owl.carousel.min.css")" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/style.css")" />
+</head>
+
+<body>
+    @model IEnumerable<jobconnect.Models.Job>
+    <div class="container-xxl bg-white p-0">
+        <!-- Search Start -->
+        <form method="get" asp-action="Home">
+        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-10">
+                        <div class="row g-2">
+                                <div class="col-md-4" style="width:255px !important;">
+                                    <input type="text" name="keyword" class="form-control border-0" style="border-radius:4px !important;" placeholder="Tên công việc" value="@ViewData["CurrentTitleFilter"]" />
+                            </div>
+                                <div class="col-md-4" style="width:255px !important;">
+                                    <input type="text" name="searchCompany" class="form-control border-0" style="border-radius:4px !important;" placeholder="Tên công ty" value="@ViewData["CurrentCompanyFilter"]" />
+                            </div>
+                                <div class="col-md-4" style="width:255px !important;">
+                                    <select name="searchProfession" class="form-select border-0" style="border-radius:4px !important;">
+                                    <option value="">Nhóm ngành</option>
+                                    @foreach (var profession in (SelectList)ViewData["Professions"])
+                                    {
+                                        if (profession.Value == (string)ViewData["CurrentProfessionFilter"])
+                                        {
+                                            <option value="@profession.Value" selected="selected">@profession.Text</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@profession.Value">@profession.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                                <div class="col-md-4" style="width:255px !important;">
+                                    <select name="searchLocation" class="form-select border-0" style="border-radius:4px !important;">
+                                    <option value="">Địa điểm</option>
+                                    @foreach (var location in (SelectList)ViewData["Locations"])
+                                    {
+                                        if (location.Value == (string)ViewData["CurrentLocationFilter"])
+                                        {
+                                            <option value="@location.Value" selected="selected">@location.Text</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@location.Value">@location.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                            <button type="submit" class="btn btn-dark border-0 w-100" style="border-radius:4px !important;">Tìm kiếm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        <!-- Search End -->
+        <!-- Jobs Start -->
+        <div class="container-xxl py-5" style="padding-top: 0px !important; margin-bottom: 40px;">
+            <div class="container">
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            @foreach (var item in Model)
+                            {
+                                <div class="job-item p-4 mb-4">
+                                    <div class="row g-4">
+                                        <a asp-action="JobDetails" asp-route-id="@item.JobId" class="col-sm-12 col-md-8 d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="/images/@item.Company.AvartarCompanies" alt="" style="width: 80px; height: 80px;">
+                                            <div class="text-start ps-4">
+                                                <h5 class="mb-3">@Html.DisplayFor(modelItem => item.Title)</h5>
+                                                <h6 class="mb-3">@Html.DisplayFor(modelItem => item.Company.CompanyName)</h6>
+                                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>@Html.DisplayFor(modelItem => item.Location.LocationName)</span>
+                                                <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>@Html.DisplayFor(modelItem => item.JobType.JobTypeName)</span>
+                                                <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>@Html.DisplayFor(modelItem => item.SalaryRange)</span>
+                                            </div>
+                                        </a>
+                                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                            <div class="d-flex mb-3">
+                                                    <a asp-action="JobDetails" asp-route-id="@item.JobId" class="btn btn-primary">Xem</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>        
+        <!-- Jobs End -->
+       
+        
+        
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="@Url.Content("~/lib/wow/wow.min.js")"></script>
+    <script src="@Url.Content("~/lib/easing/easing.min.js")"></script>
+    <script src="@Url.Content("~/lib/waypoints/waypoints.min.js")"></script>
+    <script src="@Url.Content("~/lib/owlcarousel/owl.carousel.min.js")"></script>
+
+    <!-- Template Javascript -->
+    <script src="@Url.Content("~/js/main.js")"></script>
+</body>
+

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/animate/animate.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/owlcarousel/assets/owl.carousel.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/nav.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/footer.css")" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/style.css")" />
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5" href="@Url.Action("Home2", "Home")"><img src="@Url.Content("~/images/logoxoanennho.png")" style="width:140px;" /></a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav p-4 p-lg-0">
+                <a href="@Url.Action("Index3", "Jobs")" class="nav-item nav-link">TRANG CHỦ</a>
+                <a href="@Url.Action("Index3", "Jobs")" class="nav-item nav-link">CÔNG VIỆC</a>
+                <a href="@Url.Action("Index2", "Companies")" class="nav-item nav-link">CÔNG TY</a>
+                <a href="#" class="nav-item nav-link">VỀ CHÚNG TÔI</a>
+            </div>
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <div class="dangtuyen">
+                    <a class="dangtuyen-1" href="@Url.Action("Create","Jobs")">ĐĂNG TUYỂN</a>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        @{
+                            var fullname = Context.Request.Cookies["Fullname"]; // Sử dụng Context.Request
+                        }
+                        @if (!string.IsNullOrEmpty(fullname))
+                        {
+                            <span style="color:#2B3940;">@fullname</span>
+                        }
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end rounded-0 m-0" style="right: 0; left: auto;">
+                        <a href="@Url.Action("Index2", "Users")" class="dropdown-item">Xem hồ sơ</a>
+                        <a href="@Url.Action("Index2", "Jobs")" class="dropdown-item">Quản lý tin tuyển dụng</a>
+                        <a href="@Url.Action("Index1", "Applications")" class="dropdown-item">Quản lý ứng viên</a>
+                        <a asp-action="Logout" asp-controller="Users" class="dropdown-item">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <div>
+        @RenderBody()
+    </div>
+    <!-- Footer Start -->
+    <footer class="footer-main">
+        <div class="column">
+            <div class="footer-logo">
+                <div class="logo">
+                    <img src="@Url.Content("~/images/logoxoanennho.png")" title="JobConnect" style="width:327px !important;" />
+                </div>
+                <p style="font-size:20px;"><strong>Kết nối nhanh chóng – việc làm liền tay</strong></p>
+                <p><strong>Liên hệ:</strong></p>
+                <div class="contact-info">
+                    <p style="font-size:16px;"><span style="font-size:14px; color:#6F7882;">Hotline: </span>024 6680 5533</pstyle>
+                    <p style="font-size:16px;"><span style="font-size:14px; color:#6F7882;">Email: </span><a href="mailto:jobconnect@hotro.vn">jobconnect@hotro.vn</a></p>
+                </div>
+            </div>
+
+            <div class="footer-download">
+                <p><strong>Tải xuống</strong></p>
+                <a target="_blank" href="https://itunes.apple.com/us/app">
+                    <img class="img-responsive" src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/v4/image/welcome/download/app_store.png"
+                         alt="Tai app TopCV tai App Store" title="Tải app TopCV tại App Store">
+                </a>
+                <a target="_blank" href="https://play.google.com/store/apps">
+                    <img class="img-responsive" src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/v4/image/welcome/download/chplay.png"
+                         alt="Tai app tai Google Play" title="Tải app tại Google Play">
+                </a>
+            </div>
+
+            <div class="footer-social">
+                <p><strong>Cộng đồng JobConnect</strong></p>
+                <a href="#"><img src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/v4/image/footer/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/v4/image/footer/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/v4/image/footer/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div class="column">
+
+            <div>
+                <h5 style="
+                    margin-bottom: 10px;">
+                    Tìm việc làm
+                </h5>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Việc mới nhất</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Hồ sơ của tôi</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Tất cả doanh nghiệp</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Hướng dẫn sử dụng</p>
+
+            </div>
+        </div>
+        <div class="column">
+            <div>
+                <h5 style="
+                    margin-bottom: 10px;">
+                    Tìm nhân lực
+                </h5>
+
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;"> Đăng tin tuyển dụng</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Thực tập doanh nghiệp</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Tất cả ứng viên</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Hướng dẫn sử dụng</p>
+
+            </div>
+        </div>
+        <div class="column">
+            <div>
+                <h5 style="
+                    margin-bottom: 10px;">
+                    Về chúng tôi
+                </h5>
+
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Hợp tác với JobConnect</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Điều khoản sử dụng</p>
+                <p style="font-size:14px; color:#4D5965; margin-bottom:12px;">Về JobConnect</p>
+
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        &copy; 2022 – Bản quyền trang web thuộc về Jobconnect
+    </div>
+</body>
+</html>

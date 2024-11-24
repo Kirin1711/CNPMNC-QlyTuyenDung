@@ -1,0 +1,73 @@
+﻿@model jobconnect.Models.User
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3 class="m-0">Xóa Người Dùng</h3>
+                </div>
+                <div class="card-body">
+                    <h5 class="text-center text-danger mb-4">Bạn có chắc chắn muốn xóa người dùng này không?</h5>
+
+                    <dl class="row">
+                        <!-- Tên đăng nhập -->
+                        <dt class="col-sm-4 text-muted">Tên đăng nhập:</dt>
+                        <dd class="col-sm-8 fw-bold">@Html.DisplayFor(model => model.Username)</dd>
+
+                        <!-- Họ và tên -->
+                        <dt class="col-sm-4 text-muted">Họ và tên:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.FullName)</dd>
+
+                        <!-- Email -->
+                        <dt class="col-sm-4 text-muted">Email:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <!-- Số điện thoại -->
+                        <dt class="col-sm-4 text-muted">Số điện thoại:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.PhoneNumber)</dd>
+
+                        <!-- Ngày sinh -->
+                        <dt class="col-sm-4 text-muted">Ngày sinh:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.DateOfBirth)</dd>
+
+                        <!-- Vai trò -->
+                        <dt class="col-sm-4 text-muted">Vai trò:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Role.RoleName)</dd>
+
+
+                        <!-- Trạng thái kích hoạt -->
+                        <dt class="col-sm-4 text-muted">Trạng thái kích hoạt:</dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.IsActive)
+                        </dd>
+
+                        <!-- Ảnh đại diện -->
+                        <dt class="col-sm-4 text-muted">Ảnh đại diện:</dt>
+                        <dd class="col-sm-8">
+                            <img src="@Html.DisplayFor(model => model.AvatarUrl)" alt="Ảnh đại diện" class="img-thumbnail" style="max-width: 100px;">
+                        </dd>
+                    </dl>
+
+                    <!-- Các nút -->
+                    <form asp-action="Delete2" class="text-center mt-4">
+                        <input type="hidden" asp-for="UserId" />
+                        <button type="submit" class="btn btn-danger btn-lg me-3">
+                            <i class="fas fa-trash-alt"></i> Xóa
+                        </button>
+                        <a asp-action="Index1" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

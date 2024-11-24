@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/animate/animate.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/owlcarousel/assets/owl.carousel.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/nav.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/footer.css")" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/style.css")" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap JS + Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<style>
+    /* Thiết kế giao diện tổng thể */
+    body {
+        margin-left: 260px !important; /* Tăng chiều rộng cho sidebar */
+        font-family: 'Poppins', sans-serif;
+        background-color: #f9f9fc; /* Màu nền trắng nhạt */
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 260px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff; /* Màu nền trắng */
+        color: #6b7280; /* Màu xám nhạt cho chữ */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        border-right: 2px solid #e4e4f0; /* Viền tím nhạt */
+    }
+
+        /* Logo */
+        .sidebar .navbar-brand {
+            background-color: #f3f4ff; /* Màu tím nhạt */
+            text-align: center;
+            padding: 20px;
+        }
+
+            .sidebar .navbar-brand img {
+                max-width: 160px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+                .sidebar .navbar-brand img:hover {
+                    transform: scale(1.1);
+                }
+
+        /* Link trong sidebar */
+        .sidebar a {
+            color: #6b7280; /* Màu xám nhạt */
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .sidebar a:hover {
+                background-color: #ebeafc; /* Nền tím nhạt khi hover */
+                color: #5b21b6; /* Tím đậm hơn cho chữ */
+            }
+
+            .sidebar a.active {
+                background-color: #dcd5f5; /* Màu nền tím nhạt khi được chọn */
+                color: #5b21b6; /* Màu tím đậm */
+            }
+
+        /* Dropdown */
+        .sidebar .dropdown .dropdown-menu {
+            background-color: #f9f9fc;
+            border: none;
+        }
+
+            .sidebar .dropdown .dropdown-menu a {
+                color: #6b7280;
+            }
+
+                .sidebar .dropdown .dropdown-menu a:hover {
+                    background-color: #ebeafc;
+                    color: #5b21b6;
+                }
+
+        /* Biểu tượng */
+        .sidebar a i {
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #8b5cf6; /* Màu tím nhạt */
+        }
+
+        .sidebar a.active i {
+            color: #5b21b6; /* Màu tím đậm khi được chọn */
+        }
+
+    /* Nội dung chính */
+    .content {
+        background-color: #f9f9fc; /* Màu nền trắng tím */
+    }
+</style>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <!-- Logo -->
+        <div class="navbar-brand" style="margin-right:0px;">
+            <a href="@Url.Action("Index4", "Jobs")">
+                <img src="@Url.Content("~/images/logoxoanennho.png")" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- Dropdown User -->
+        <div class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="dropdownUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i>
+                @{
+                    var fullname = Context.Request.Cookies["Fullname"];
+                }
+                <span class="ms-2">
+                    @if (!string.IsNullOrEmpty(fullname))
+                    {
+                        @fullname
+                    }
+                    else
+                    {
+                        @:Người dùng
+                    }
+                </span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownUser">
+                <li>
+                    <a asp-action="Logout" asp-controller="Users" class="dropdown-item">
+                        <i class="bi bi-box-arrow-right"></i> Đăng xuất
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav flex-column mt-3">
+            <a href="@Url.Action("Index4", "Jobs")" class="nav-item nav-link">
+                <i class="bi bi-briefcase"></i> Quản lý tin tuyển dụng
+            </a>
+            <a href="@Url.Action("Index", "Users")" class="nav-item nav-link">
+                <i class="bi bi-people"></i> Quản lý nhà tuyển dụng
+            </a>
+            <a href="@Url.Action("Index3", "Users")" class="nav-item nav-link">
+                <i class="bi bi-person-lines-fill"></i> Quản lý hồ sơ ứng viên
+            </a>
+            <a href="@Url.Action("Index3", "Companies")" class="nav-item nav-link">
+                <i class="bi bi-building"></i> Quản lý công ty
+            </a>
+            <a href="@Url.Action("Statistics", "Admin")" class="nav-item nav-link">
+                <i class="fas fa-chart-bar"></i> Thống kê và Báo cáo
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        @RenderBody()
+    </div>
+</body>
+
+</html>

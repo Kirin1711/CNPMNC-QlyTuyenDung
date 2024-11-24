@@ -1,0 +1,72 @@
+﻿@model jobconnect.Models.Job
+
+@{
+    ViewData["Title"] = "Delete1";
+    Layout = "~/Views/Shared/_MasterLayout3.cshtml";
+}
+
+<h1 class="text-center mb-4">Gỡ tin tuyển dụng</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h3 class="text-center text-danger mb-4">Bạn có chắc chắn muốn gỡ công việc này?</h3>
+                    <hr />
+                    <dl class="row">
+                        <!-- Tiêu đề -->
+                        <dt class="col-sm-4 fw-bold">Tiêu đề:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Title)</dd>
+
+                        <!-- Mô tả -->
+                        <dt class="col-sm-4 fw-bold">Mô tả:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Description)</dd>
+
+                        <!-- Mức lương -->
+                        <dt class="col-sm-4 fw-bold">Mức lương:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.SalaryRange)</dd>
+
+                        <!-- Ngày đăng -->
+                        <dt class="col-sm-4 fw-bold">Ngày đăng:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.PostedDate)</dd>
+
+                        <!-- Kinh nghiệm yêu cầu -->
+                        <dt class="col-sm-4 fw-bold">Kinh nghiệm yêu cầu:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.ExperienceLevel)</dd>
+
+                        <!-- Công ty -->
+                        <dt class="col-sm-4 fw-bold">Công ty:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Company.CompanyName)</dd>
+
+                        <!-- Loại công việc -->
+                        <dt class="col-sm-4 fw-bold">Loại công việc:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.JobType.JobTypeName)</dd>
+
+                        <!-- Địa điểm -->
+                        <dt class="col-sm-4 fw-bold">Địa điểm:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Location.LocationName)</dd>
+
+                        <!-- Ngành nghề -->
+                        <dt class="col-sm-4 fw-bold">Ngành nghề:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Profession.ProfessionName)</dd>
+                    </dl>
+
+                    <!-- Nút hành động -->
+                    <form asp-action="Delete" class="mt-4">
+                        <input type="hidden" asp-for="JobId" />
+                        <div class="d-flex justify-content-center gap-3">
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="fas fa-trash-alt"></i> Xóa
+                            </button>
+                            <a asp-action="Index4" class="btn btn-secondary btn-lg">
+                                <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

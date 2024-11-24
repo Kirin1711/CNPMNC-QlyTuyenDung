@@ -1,0 +1,107 @@
+﻿@model IEnumerable<jobconnect.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvatarUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                    @if (!string.IsNullOrEmpty(item.AvatarUrl))
+                    {
+                        <img src="~/images/@item.AvatarUrl" style="height:100px; width:100px;" alt="Image" />
+                    }
+                    else
+                    {
+                        <img src="~/images/default.jpg" style="height:100px ; width:100px" />
+                    }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role.RoleName)
+            </td>
+            <td>
+                @if (item.Role.RoleId == 1) 
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.UserId">Sửa</a>
+                    }
+                    else if (item.Role.RoleId == 2)
+                    {
+                        <a asp-action="Edit1" asp-route-id="@item.UserId">Sửa</a> 
+                    }
+                    else if (item.Role.RoleId == 3)
+                    {
+                        <a asp-action="Edit2" asp-route-id="@item.UserId">Sửa</a>
+                    }|
+                <a asp-action="Details" asp-route-id="@item.UserId">Xem</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserId">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

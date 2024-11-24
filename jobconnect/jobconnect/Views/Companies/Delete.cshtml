@@ -1,0 +1,73 @@
+﻿@model jobconnect.Models.Company
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_MasterLayout3.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3 class="m-0">Xóa Công Ty</h3>
+                </div>
+                <div class="card-body">
+                    <h5 class="text-center text-danger mb-4">Bạn có chắc chắn muốn xóa công ty này không?</h5>
+
+                    <dl class="row">
+                        <!-- Tên công ty -->
+                        <dt class="col-sm-4 text-muted">Tên công ty:</dt>
+                        <dd class="col-sm-8 fw-bold">@Html.DisplayFor(model => model.CompanyName)</dd>
+
+                        <!-- Địa chỉ -->
+                        <dt class="col-sm-4 text-muted">Địa chỉ:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Address)</dd>
+
+                        <!-- Số điện thoại -->
+                        <dt class="col-sm-4 text-muted">Số điện thoại:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Phone)</dd>
+
+                        <!-- Email -->
+                        <dt class="col-sm-4 text-muted">Email:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.EmailCompanies)</dd>
+
+                        <!-- Trang web -->
+                        <dt class="col-sm-4 text-muted">Trang web:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Website)</dd>
+
+                        <!-- Ảnh đại diện -->
+                        <dt class="col-sm-4 text-muted">Ảnh đại diện:</dt>
+                        <dd class="col-sm-8">
+                            @if (!string.IsNullOrEmpty(Model.AvartarCompanies))
+                            {
+                                <img src="/images/@Model.AvartarCompanies" alt="Ảnh đại diện" class="img-thumbnail" style="max-width: 100px;">
+                            }
+                            else
+                            {
+                                <p class="text-muted">Chưa có ảnh.</p>
+                            }
+                        </dd>
+
+                        <!-- Lĩnh vực -->
+                        <dt class="col-sm-4 text-muted">Lĩnh vực:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Field.FieldName)</dd>
+                    </dl>
+
+                    <!-- Các nút -->
+                    <form asp-action="Delete" class="text-center mt-4">
+                        <input type="hidden" asp-for="CompanyId" />
+                        <button type="submit" class="btn btn-danger btn-lg me-3">
+                            <i class="fas fa-trash-alt"></i> Xóa
+                        </button>
+                        <a asp-action="Index3" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

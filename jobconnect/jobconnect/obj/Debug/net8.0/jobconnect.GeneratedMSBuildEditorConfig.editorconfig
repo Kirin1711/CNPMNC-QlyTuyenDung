@@ -1,0 +1,283 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = jobconnect
+build_property.RootNamespace = jobconnect
+build_property.ProjectDir = D:\lethanhvinh\CNPMNC\update2\jobconnect\jobconnect\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\lethanhvinh\CNPMNC\update2\jobconnect\jobconnect
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Admin/Statistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RhdGlzdGljcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Applications/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Applications/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Applications/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Applications/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Applications/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Applications/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXEluZGV4MS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEluZGV4MS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEluZGV4Mi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Companies/Index3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEluZGV4My5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/Home1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/Home2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/Home3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/JobDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKb2JEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/JobDetails1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKb2JEZXRhaWxzMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/JobDetails2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKb2JEZXRhaWxzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Delete1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZWxldGUxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Details1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZXRhaWxzMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Details2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZXRhaWxzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Details3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZXRhaWxzMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Index3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleDMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/Index4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Jobs/joblist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xqb2JsaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/_MasterLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXN0ZXJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/_MasterLayout1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXN0ZXJMYXlvdXQxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/_MasterLayout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXN0ZXJMYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/_MasterLayout3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXN0ZXJMYXlvdXQzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Create1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Delete1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Delete2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Delete3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Edit1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Edit2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Edit3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdDMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXgxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Index10.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXgxMC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXgyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Index3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXgzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Users/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/lethanhvinh/CNPMNC/update2/jobconnect/jobconnect/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ixurudsev9

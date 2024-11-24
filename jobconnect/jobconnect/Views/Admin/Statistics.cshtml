@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Statistics";
+    Layout = "~/Views/Shared/_MasterLayout3.cshtml";
+}
+
+<div class="container py-5">
+    <h2 class="text-center text-primary fw-bold mb-5">Thống kê & Báo cáo</h2>
+    
+    <!-- Row 1: Tổng số Applicant và Tổng số công ty -->
+    <div class="row text-center mb-4">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-person-fill text-primary fs-1"></i>
+                    <h5 class="card-title mt-3 text-uppercase">Tổng số Ứng viên</h5>
+                    <h2 class="text-success fw-bold">@ViewBag.TotalApplicants</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <i class="bi bi-building text-primary fs-1"></i>
+                    <h5 class="card-title mt-3 text-uppercase">Tổng số Công ty</h5>
+                    <h2 class="text-info fw-bold">@ViewBag.TotalCompanies</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2: Biểu đồ công việc -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-primary text-white fw-bold">
+                    Công việc theo ngành
+                </div>
+                <div class="card-body">
+                    <canvas id="jobsByProfessionChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-primary text-white fw-bold">
+                    Công việc theo công ty
+                </div>
+                <div class="card-body">
+                    <canvas id="jobsByCompanyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const jobsByProfession = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.JobsByProfession));
+    const jobsByCompany = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.JobsByCompany));
+    const newUsersByMonth = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.NewUsersByMonth));
+
+    // Công việc theo ngành
+    const ctxJobsProfession = document.getElementById('jobsByProfessionChart').getContext('2d');
+    new Chart(ctxJobsProfession, {
+        type: 'doughnut',
+        data: {
+            labels: jobsByProfession.map(item => item.Profession),
+            datasets: [{
+                data: jobsByProfession.map(item => item.Count),
+                backgroundColor: ['#FF6F61', '#6B8E23', '#36A2EB', '#FFCE56', '#FF6384'],
+            }]
+        },
+    });
+
+    // Công việc theo công ty
+    const ctxJobsCompany = document.getElementById('jobsByCompanyChart').getContext('2d');
+    new Chart(ctxJobsCompany, {
+        type: 'bar',
+        data: {
+            labels: jobsByCompany.map(item => item.Company),
+            datasets: [{
+                data: jobsByCompany.map(item => item.Count),
+                backgroundColor: '#36A2EB',
+                borderColor: '#075985',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // Tài khoản mới theo tháng
+    const ctxNewUsers = document.getElementById('newUsersChart').getContext('2d');
+    new Chart(ctxNewUsers, {
+        type: 'line',
+        data: {
+            labels: newUsersByMonth.map(item => `${item.Month}/${item.Year}`),
+            datasets: [{
+                label: 'Tài khoản mới',
+                data: newUsersByMonth.map(item => item.Count),
+                borderColor: '#4CAF50',
+                backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                fill: true,
+            }]
+        },
+    });
+</script>

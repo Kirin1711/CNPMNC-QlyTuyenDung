@@ -1,0 +1,105 @@
+﻿@model jobconnect.Models.Job
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_MasterLayout2.cshtml";
+}
+<head>
+    <meta charset="utf-8">
+    <title>Job Connect</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/animate/animate.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/lib/owlcarousel/assets/owl.carousel.min.css")" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/style.css")" />
+</head>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Đăng tin tuyển dụng</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Title" class="form-label fw-semibold">Tiêu đề công việc</label>
+                            <input asp-for="Title" class="form-control" placeholder="Nhập tiêu đề công việc" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Description" class="form-label fw-semibold">Mô tả công việc</label>
+                            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Mô tả chi tiết công việc"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="SalaryRange" class="form-label fw-semibold">Mức lương</label>
+                            <input asp-for="SalaryRange" class="form-control" placeholder="Mức lương công việc" />
+                            <span asp-validation-for="SalaryRange" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="ExperienceLevel" class="form-label fw-semibold">Cấp độ kinh nghiệm</label>
+                            <input asp-for="ExperienceLevel" class="form-control" placeholder="Cấp độ kinh nghiệm yêu cầu" />
+                            <span asp-validation-for="ExperienceLevel" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="JobTypeId" class="form-label fw-semibold">Loại công việc</label>
+                            <select asp-for="JobTypeId" class="form-select" asp-items="ViewBag.JobTypeId"></select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <input type="hidden" asp-for="CompanyId" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="ProfessionId" class="form-label fw-semibold">Ngành nghề</label>
+                            <select asp-for="ProfessionId" class="form-select" asp-items="ViewBag.ProfessionId"></select>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label asp-for="LocationId" class="form-label fw-semibold">Địa điểm làm việc</label>
+                            <select asp-for="LocationId" class="form-select" asp-items="ViewBag.LocationId"></select>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <input type="submit" value="Đăng" class="btn btn-primary btn-lg w-100" />
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Index3" class="btn btn-link">Quay lại danh sách</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

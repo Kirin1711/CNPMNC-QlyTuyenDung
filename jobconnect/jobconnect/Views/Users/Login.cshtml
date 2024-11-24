@@ -1,0 +1,83 @@
+﻿@model jobconnect.Models.Login
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/login/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/login/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/login/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/login/css/style.css">
+    <title>Login</title>
+</head>
+<body>
+
+
+    <div class="d-lg-flex half">
+        <a href="@Url.Action("Home","Home")" class="bg order-1 order-md-2" style="background-image: url('@Url.Content("~/images/logo.png")') !important;"></a>
+		<div class="contents order-2 order-md-1">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+                        <h3 style="margin-bottom: 30px; color:#097EFF; text-align:center;">
+                            <strong>Đăng nhập</strong>
+                        </h3>
+                        @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey(string.Empty))
+                        {
+                            <div class="text-danger">
+                                @foreach (var error in ViewData.ModelState[string.Empty].Errors)
+                                {
+                                    <p>@error.ErrorMessage</p>
+                                }
+                            </div>
+                        }
+                        <form asp-action="Login" method="post">
+                            <label for="username" style="color:#B3B3B3;">Tài khoản/Email</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="UserNameOrEmail" type="text" class="form-control" placeholder="Nhập tài khoản hoặc Email" id="username" style="font-size:15px !important;">
+                                <span asp-validation-for="UserNameOrEmail" class="text-danger"></span>
+                            </div>
+                            <label for="password" style="color:#B3B3B3;">Mật khẩu</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="Password" type="password" class="form-control" placeholder="Nhập mật khẩu" id="password" style="font-size:15px !important;">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="d-flex mb-5 align-items-center">
+                                <span class="ml-auto"><a href="#" class="forgot-pass" style="color:#097EFF !important;">Quên mật khẩu</a></span>
+                            </div>
+
+                            <input type="submit" value="Đăng nhập" class="btn btn-block btn-primary">
+                            <span class="ml-auto" style="font-size:14px !important;">Bạn chưa có tài khoản? <a href="@Url.Action("Create","Users")" class="sign-in" style="color:#097EFF !important;">Đăng ký ngay</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="~/login/js/jquery-3.3.1.min.js"></script>
+    <script src="~/login/js/popper.min.js"></script>
+    <script src="~/login/js/bootstrap.min.js"></script>
+    <script src="~/login/js/main.js"></script>
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

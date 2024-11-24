@@ -1,0 +1,92 @@
+﻿@model jobconnect.Models.User
+
+@{
+    ViewData["Title"] = "Signup";
+    Layout = null;
+}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/login/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/login/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/login/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/login/css/style.css">
+    <title>Signup</title>
+</head>
+<body>
+
+
+    <div class="d-lg-flex half">
+        <<a href="@Url.Action("Home","Home")" class="bg order-1 order-md-2" style="background-image: url('@Url.Content("~/images/logo.png")'); height: 100vh; width: 50%; position: fixed; top: 0; right: 0; background-size: cover; background-position: center;"></a>
+        <div class="contents order-2 order-md-1" style="margin-right: 50%; width: 50%;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7" style="padding-top:60px; padding-bottom:20px;">
+                        <h3 style="margin-bottom: 30px; color:#097EFF; text-align:center;">
+                            <h3 style="color:#097EFF; text-align:center;">
+                                <strong>Đăng ký</strong>
+                            </h3>
+                            <p style="margin-bottom: 30px;color:#097EFF;font-size:18px; text-align:center;"><b>Chào mừng bạn đến với Job Connect</b></p>
+                        </h3>
+                        <form asp-action="Create" enctype="multipart/form-data">
+                            <label for="username" style="color:#B3B3B3;">Tài khoản</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px; font-size:15px !important;">
+                                <input asp-for="Username" class="form-control" placeholder="Nhập tài khoản" style="font-size:15px !important;" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <label for="password" style="color:#B3B3B3;">Mật khẩu</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="Password" type="password" class="form-control" placeholder="Nhập mật khẩu" style="font-size:15px !important;" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <label for="password" style="color:#B3B3B3;">Họ tên</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="FullName" class="form-control" placeholder="Nhập họ tên của bạn" style="font-size:15px !important;" />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <label for="password" style="color:#B3B3B3;">Email</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="Email" class="form-control" placeholder="Nhập địa chỉ Email" style="font-size:15px !important;" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <input type="hidden" asp-for="RoleId" value="3" />
+                            <label for="password" style="color:#B3B3B3;">Ngày sinh</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="DateOfBirth" class="form-control" type="date" style="font-size:15px !important;" />
+                                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                            </div>                           
+                            <label for="password" style="color:#B3B3B3;">Số điện thoại</label>
+                            <div class="form-group last mb-3" style="padding-top:0px; padding-bottom: 0px;">
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="Nhập số điện thoại" style="font-size:15px !important;" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <input type="submit" value="Đăng ký" class="btn btn-block btn-primary">
+                            <span class="ml-auto" style="font-size:14px !important;">Bạn đã có tài khoản? <a href="@Url.Action("Login","Users")" class="sign-in" style="color:#097EFF !important;">Đăng nhập</a></span><br />
+                            <span class="ml-auto" style="font-size:14px !important;">Bạn là nhà tuyển dụng <a href="@Url.Action("Create1","Users")" class="sign-in" style="color:#097EFF !important;">Đăng ký tại đây</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="~/login/js/jquery-3.3.1.min.js"></script>
+    <script src="~/login/js/popper.min.js"></script>
+    <script src="~/login/js/bootstrap.min.js"></script>
+    <script src="~/login/js/main.js"></script>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

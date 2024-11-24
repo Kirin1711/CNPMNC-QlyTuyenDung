@@ -1,0 +1,60 @@
+﻿body {
+}
+
+.company-card {
+    display: flex !important; /* Sắp xếp ngang */
+    flex-direction: row !important; /* Layout ngang */
+    align-items: center !important; /* Canh giữa theo chiều dọc */
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 15px auto !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    background-color: #ffffff !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease !important, box-shadow 0.3s ease !important;
+}
+
+    .company-card:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+
+.company-logo {
+    flex-shrink: 0 !important; /* Đảm bảo kích thước logo không bị thu nhỏ */
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 20px !important; /* Tạo khoảng cách giữa logo và thông tin */
+}
+
+    .company-logo img {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 12px !important;
+        object-fit: cover !important;
+    }
+
+.company-details {
+    flex-grow: 1 !important; /* Chiếm phần còn lại của không gian */
+}
+
+.company-name {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #333333 !important;
+    margin-bottom: 5px !important;
+}
+
+.company-industry {
+    font-size: 14px !important;
+    color: #666666 !important;
+}
+
+.company-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Tạo 3 cột */
+    gap: 20px !important; /* Khoảng cách giữa các thẻ */
+    padding: 20px !important;
+    justify-items: center !important; /* Căn giữa các item */
+}
+

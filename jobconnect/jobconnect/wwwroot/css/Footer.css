@@ -1,0 +1,96 @@
+﻿body {
+}
+
+.footer-main {
+    background-color: #ffff !important;
+    padding-top: 40px !important;
+    padding-left: 115px !important;
+    padding-right: 115px !important;
+    border-top: 1px solid #ddd !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: flex-start !important;
+}
+
+.footer-column {
+    max-width: 200px !important;
+}
+
+.logo {
+    margin-bottom: 16px !important;
+    width: 327px !important;
+}
+
+.footer-logo,
+.footer-contact,
+.footer-download,
+.footer-social {
+    flex: 1 !important;
+    min-width: 200px !important;
+    margin-bottom: 20px !important;
+}
+
+    .footer-logo img {
+        width: 150px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-logo p,
+    .footer-contact p,
+    .footer-download p,
+    .footer-social p {
+        color: #555 !important;
+        margin-bottom: 10px !important;
+    }
+
+.contact-info a {
+    color: #9d00ff !important;
+    text-decoration: none !important;
+}
+
+.footer-download img {
+    width: 130px !important;
+    margin-right: 10px !important;
+    margin-top: 10px !important;
+}
+
+.footer-social img {
+    width: 32px !important;
+    margin-right: 10px !important;
+}
+
+.footer-links {
+    display: flex !important;
+    justify-content: space-between !important;
+    flex: 2 !important;
+    margin-top: 20px !important;
+}
+
+    .footer-links div {
+        min-width: 150px !important;
+        margin-right: 20px !important;
+    }
+
+    .footer-links h4 {
+        font-weight: bold !important;
+        margin-bottom: 10px !important;
+        color: #333 !important;
+    }
+
+    .footer-links ul {
+        list-style: none !important;
+        padding: 0 !important;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px !important;
+        color: #555 !important;
+    }
+
+.footer-bottom {
+    text-align: center !important;
+    padding: 15px 0 !important;
+    background-color: #004080 !important;
+    color: #fff !important;
+    font-size: 14px !important;
+}

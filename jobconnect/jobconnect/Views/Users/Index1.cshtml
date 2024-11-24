@@ -1,0 +1,50 @@
+﻿@model IEnumerable<jobconnect.Models.User>
+
+@{
+    ViewData["Title"] = "Index1";
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/Infor.css")" />
+</head>
+@foreach (var item in Model)
+{
+    <div class="profile-container">
+        <h2 class="profile-title">Thông tin ứng viên</h2>
+        <div class="profile-info">
+            <div alt="Avatar" class="profile-avatar">
+                @if (!string.IsNullOrEmpty(item.AvatarUrl))
+                {
+                    <img src="~/images/@item.AvatarUrl" style="height:100px; width:100px;" alt="Image" class="profile-avatar" />
+                }
+                else
+                {
+                    <img src="~/images/default.jpg" style="height:100px ; width:100px" class="profile-avatar" />
+                }
+            </div>
+            <div class="profile-details">
+                <p><strong>Họ và tên:</strong> @Html.DisplayFor(modelItem => item.FullName)</p>
+                <p><strong>Ngày sinh:</strong> @Html.DisplayFor(modelItem => item.DateOfBirth)</p>
+                <p><strong>Số điện thoại:</strong> @Html.DisplayFor(modelItem => item.PhoneNumber)</p>
+                <p><strong>Email:</strong> @Html.DisplayFor(modelItem => item.Email)</p>
+                <p><strong>Tên đăng nhập:</strong> @Html.DisplayFor(modelItem => item.Username)</p>
+                <p><strong>Vai trò:</strong> @Html.DisplayFor(modelItem => item.Role.RoleName)</p>
+            </div>
+        </div>
+        @if (item.Role.RoleId == 1)
+        {
+            <a asp-action="Edit" asp-route-id="@item.UserId" class="profile-edit-button">Chỉnh sửa hồ sơ</a>
+        }
+        else if (item.Role.RoleId == 2)
+        {
+            <a asp-action="Edit1" asp-route-id="@item.UserId" class="profile-edit-button">Chỉnh sửa hồ sơ</a>
+        }
+        else if (item.Role.RoleId == 3)
+        {
+            <a asp-action="Edit2" asp-route-id="@item.UserId" class="profile-edit-button">Chỉnh sửa hồ sơ</a>
+        }
+        <a asp-action="Delete" asp-route-id="@item.UserId" class="profile-watch-button">Xóa tài khoản</a>
+    </div>
+}
+
+

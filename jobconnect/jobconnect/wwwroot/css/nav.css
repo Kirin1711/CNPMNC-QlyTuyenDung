@@ -1,0 +1,88 @@
+﻿body {
+}
+.dangnhap {
+    font-size: 15px !important;
+    margin-right: 10px !important;
+    padding-top: 9.4px !important;
+    padding-bottom: 11px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+    border-radius: 4px !important;
+    height: 42px !important;
+    border: 2px solid #9d00ff !important;
+}
+dangnhap:hover {
+    border: 1px solid #5e0099 !important;
+}
+.dangnhap:hover .dangnhap-1 {
+    color: #5e0099 !important;
+}
+.dangky {
+    font-size: 15px !important;
+    margin-right: 10px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 14px !important;
+    margin-bottom: 10px !important;
+    border-radius: 4px !important;
+    height: 42px !important;
+    background-color: #9d00ff !important;
+    color: #FFFFFF !important;
+}
+.dangky-1 {
+    color: #FFFFFF !important;
+}
+.dangky:hover {
+    background-color: #5e0099 !important;
+}
+.dangtuyen {
+    font-size: 15px !important;
+    font-family: "Heebo", sans-serif;
+    margin-right: 10px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 14px !important;
+    margin-bottom: 10px !important;
+    border-radius: 4px !important;
+    height: 42px !important;
+    background-color: #2B3940 !important;
+    color: #FFFFFF !important;
+}
+
+.dangtuyen-1 {
+    color: #FFFFFF !important;
+}
+
+.dangtuyen:hover {
+    background-color: #161f29 !important;
+}
+
+.dangtuyen-2 {
+    font-size: 15px !important;
+    font-family: "Heebo", sans-serif;
+    margin-right: 30px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 14px !important;
+    margin-bottom: 10px !important;
+    border-radius: 4px !important;
+    height: 42px !important;
+    background-color: #2B3940 !important;
+    color: #FFFFFF !important;
+}
+
+.dangtuyen-1 {
+    color: #FFFFFF !important;
+}
+
+.dangtuyen-2:hover {
+    background-color: #161f29 !important;
+}

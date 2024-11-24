@@ -1,0 +1,38 @@
+﻿@model IEnumerable<jobconnect.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="@Url.Content("~/css/Companies.css")" />
+</head>
+<div class="company-grid">
+    @foreach (var item in Model)
+    {
+        <div class="company-card">
+            <div class="company-logo">
+                @if (!string.IsNullOrEmpty(item.AvartarCompanies))
+                {
+                    <img src="~/images/@item.AvartarCompanies" alt="@item.CompanyName" />
+                }
+                else
+                {
+                    <img src="@item.AvartarCompanies" alt="@item.CompanyName" />
+                }
+            </div>
+            <div class="company-details">
+                <h3 class="company-name">
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </h3>
+                <p class="company-industry">
+                    @Html.DisplayFor(modelItem => item.Field.FieldName)
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
+

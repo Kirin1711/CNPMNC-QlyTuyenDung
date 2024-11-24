@@ -1,0 +1,78 @@
+﻿@model jobconnect.Models.Company
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_MasterLayout3.cshtml";
+}
+
+<h1 class="text-center mb-4">Thêm Công Ty</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <!-- Validation Summary -->
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+                        <!-- Tên công ty -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="CompanyName" class="form-control" placeholder="Nhập tên công ty" />
+                            <label asp-for="CompanyName">Tên công ty</label>
+                            <span asp-validation-for="CompanyName" class="text-danger"></span>
+                        </div>
+
+                        <!-- Lĩnh vực -->
+                        <div class="mb-3">
+                            <label asp-for="FieldId" class="form-label">Lĩnh vực</label>
+                            <select asp-for="FieldId" class="form-select" asp-items="ViewBag.FieldId"></select>
+                            <span asp-validation-for="FieldId" class="text-danger"></span>
+                        </div>
+
+                        <!-- Địa chỉ -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="Address" class="form-control" placeholder="Nhập địa chỉ" />
+                            <label asp-for="Address">Địa chỉ</label>
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <!-- Số điện thoại -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="Phone" class="form-control" placeholder="Nhập số điện thoại" />
+                            <label asp-for="Phone">Số điện thoại</label>
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="EmailCompanies" type="email" class="form-control" placeholder="Nhập email" />
+                            <label asp-for="EmailCompanies">Email</label>
+                            <span asp-validation-for="EmailCompanies" class="text-danger"></span>
+                        </div>
+
+                        <!-- Website -->
+                        <div class="form-floating mb-3">
+                            <input asp-for="Website" class="form-control" placeholder="Nhập URL website" />
+                            <label asp-for="Website">Website</label>
+                            <span asp-validation-for="Website" class="text-danger"></span>
+                        </div>
+
+                        <!-- Logo / Hình ảnh -->
+                        <div class="mb-3">
+                            <label asp-for="ImageFile" class="form-label">Logo công ty</label>
+                            <input asp-for="ImageFile" type="file" class="form-control" />
+                            <span asp-validation-for="ImageFile" class="text-danger"></span>
+                        </div>
+
+                        <!-- Nút -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Tạo công ty</button>
+                            <a asp-action="Index3" class="btn btn-secondary btn-lg">Quay lại danh sách</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
